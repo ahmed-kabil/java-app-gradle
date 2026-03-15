@@ -12,8 +12,8 @@
             justify-content: center;
             align-items: center;
             height: 100vh;
-            background: linear-gradient(135deg, #1e1e2f 0%, #0f0f1a 100%);
-            /* background: linear-gradient(135deg, #395737 0%, #2c4b45 100%); */
+            /* Deep, dark radial background - removes the 'white' feel */
+            background: radial-gradient(circle at center, #10121a 0%, #050508 100%);
             font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
             color: white;
         }
@@ -21,17 +21,20 @@
         .container {
             text-align: center;
             padding: 3rem;
-            background: rgba(255, 255, 255, 0.05);
+            /* Darker glassmorphism */
+            background: rgba(255, 255, 255, 0.02);
             border-radius: 20px;
-            backdrop-filter: blur(10px);
-            border: 1px solid rgba(255, 255, 255, 0.1);
-            box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37);
+            backdrop-filter: blur(15px);
+            /* Subtle blue-ish border glow */
+            border: 1px solid rgba(0, 212, 255, 0.1);
+            box-shadow: 0 20px 50px 0 rgba(0, 0, 0, 0.6);
         }
 
         h1 {
             font-size: 2.5rem;
             margin-bottom: 0.5rem;
-            background: linear-gradient(90deg, #ff4b2b, #ff416c);
+            /* Clean Cyan to Deep Blue gradient */
+            background: linear-gradient(90deg, #00d4ff, #0072ff);
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
             font-weight: 900;
@@ -39,7 +42,8 @@
 
         p {
             font-size: 1.1rem;
-            color: #8892b0;
+            /* Muted slate blue color for better contrast on dark */
+            color: #64748b;
             letter-spacing: 1px;
         }
 
@@ -47,9 +51,10 @@
             display: inline-block;
             margin-top: 15px;
             padding: 5px 15px;
-            background: rgba(55, 123, 212, 0.2);
-            color: #377bd4;
-            border: 1px solid #377bd4;
+            /* Darker badge background to prevent brightness */
+            background: rgba(0, 212, 255, 0.05);
+            color: #00d4ff;
+            border: 1px solid rgba(0, 212, 255, 0.4);
             border-radius: 50px;
             font-size: 0.8rem;
             text-transform: uppercase;
@@ -61,7 +66,7 @@
     <div class="container">
         <h1>Hello from Java App</h1>
         <p>Your Spring Boot backend is active.</p>
-        <p><i style="color: #d43778;">build by gradle</i></p>
+        <p><i style="color: #0072ff;">build by gradle</i></p>
         <div class="badge">Powered by OpenJDK 17</div>
     </div>
 </body>
